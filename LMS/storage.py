@@ -64,7 +64,9 @@ class CloudinaryStorage(Storage):
             content,
             resource_type = 'raw',
             public_id     = clean_name,
-            overwrite     = True
+            overwrite     = True,
+            access_mode   = 'public',    # ← ADD THIS
+            type          = 'upload'     # ← ADD THIS
         )
         # Return the secure URL directly
         return response['secure_url']
