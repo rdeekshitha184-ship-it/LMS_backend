@@ -434,13 +434,31 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'cloudinary_storage',
+#     'django.contrib.staticfiles',
+#     'cloudinary',
+#     'rest_framework',
+#     'rest_framework_simplejwt',
+#     'corsheaders',
+#     'accounts',
+#     'notes',
+#     'assignments',
+#     'notices',
+#     'timetable',
+# ]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
@@ -538,7 +556,8 @@ USE_TZ        = True
 STATIC_URL  = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# Cloudinary for media files
+DEFAULT_FILE_STORAGE = 'LMS.storage.CloudinaryStorage'
 
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
